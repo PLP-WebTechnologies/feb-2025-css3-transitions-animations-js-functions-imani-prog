@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 100px;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+}
+
+input, button {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    margin: 5px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+}
+
+.banner {
+    font-size: 2rem;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: all 0.6s ease-in-out;
+}
+
+.banner.show {
+    opacity: 1;
+    transform: translateY(0);
+    animation: glow 2s infinite alternate;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #fff;
+    }
+    to {
+        text-shadow: 0 0 20px #ffcc00;
+    }
+}
